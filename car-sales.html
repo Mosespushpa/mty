@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="./bootstrap.css">
+     <link rel="stylesheet" href="style.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+     <link rel="stylesheet" href="./all.css">
+     <script src="./bootstrap.bundle.js" async></script>
+          
+    <title>Car-services</title>
+</head>
+<body>
+     <nav class="navbar navbar-white bg-white  navbar-expand-md text text-dark  sticky-top">
+        <div class="container-fluid">
+        <image src="./LOGO.png" widht="35px" height="30px"></image>
+          <span class="text-dark "id="H2"> <H2>SHOP-WHEELS</H2></span>
+         
+         
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbar">
+            
+             
+              
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item px-3">
+                <a href="index.html" class="nav-link" class="text-white">Home</a>
+              </li>
+              <li class="nav-item px-3">
+                <a href="index.html#services" class="nav-link">Services</a>
+              </li>
+              <li class="nav-item px-3">
+                <a href="index.html#sales" class="nav-link" class="text-white">Sales</a>
+              </li>
+              <li class="nav-item px-3">
+                <a href="index.html#sinUp" class="nav-link">SinUp</a>
+              </li>
+              <li class="nav-item px-3">
+                <a href="index.html#About-us" class="nav-link">About-us</a>
+              </li>
+              <li class="nav-item px-3">
+                <a href="index.html#contact" class="nav-link">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div class="text-center">
+        <h2>CAR<span class="badge bg-success">SALES</span></h2>
+        <div  id="sales" class="grid">
+          <div class="card-1">
+              <div class="row p-3">
+                   <div class="col-4 text-center">
+                        <button class="btn btn-danger"><a href="popular-cars.html" class="nav-link">popular</a></button>
+                   </div>
+                   <div class="col-4 text-center">
+                    <button class="btn btn-danger"><a href="new-cars.html" class="nav-link">New</a></button>
+                   </div>
+                   <div class="col-4 text-center">
+                    <button class="btn btn-danger"><a href="upcoming-car.html" class="nav-link">UpComing</a></button>
+                   </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  <div>
+      <img width="100%" hight=""  src="./cs1.png" alt="cs1">
+      <img width="100%" hight=""  src="./cs2.png">
+      <img width="100%" hight=""  src="./cs3.png">
+    </div>
+    <footer>
+      <div class="container-1 p-2  ">
+        <div class="text-center text-white bg-secondary">
+        <h2><p><span class="h3">&copy</span>Copyright 2022</p></h2>
+        <div class="row">
+          
+          <div class="col-lg-6  p-5 widht=100% height=100%">
+            <img src="./LOGO.png" atl="" class="img-fluid">
+          </div>
+            <div class="col-lg-6 p-5">
+               <div class="row ">
+                <div class="col-4 text-white"><h4>project</h4>
+                  <h6>Changelog</h6>
+                   <h6>Status</h6>
+                    <h6>Commission</h6>
+                   <h6> Licence</h6>
+                    <h6>All Version</h6>
+                  </div>
+                <div class="col-4 text-white">
+                  <h4>Community</h4>
+                  <h6><a href="#" class="fa-light fa-at text-danger"></a>e-mail</h6>
+                   <h6><a href="#" class="fab fa-github text-dark"></a>Github</h6>
+                    <h6><a href="#" class="fab fa-twitter text-primary"></a>twitter</h6>
+                   <h6><a href="#" class="fab fa-facebook text-info"></a>Facebook</h6>
+                    <h6><a href="#" class="fab fa-instagram text-warning"></a>instagram</h6>
+                   </div>
+                <div class="col-4 text-white">
+                  <h4>help</h4>
+                  <h6>support</h6>
+                   <h6>Troubleshooting</h6>
+                    <h6>Contact</h6>
+                   </div>
+               </div> 
+             </div>
+            </div>
+            <h2>Time__<i class="fas fa-clock"></i></h2>
+            <div class="clock">
+                <div>
+                 <h3><span id="hour">00</span>:<span id="min">00</span>:<span id="seconds">00</span>-<span id="ampm">AM</span>  </h3>   
+                </div>
+                <script>
+                    var hr=document.getElementById('hour');   
+                    var min=document.getElementById('min');                
+                    var ses=document.getElementById('seconds');   
+                    var ampm1=document.getElementById('ampm');   
+                    function updateClock(){
+                        var date=new Date();
+                        h=date.getHours();
+                        m=date.getMinutes();
+                        s=date.getSeconds();
+                        ampm2="AM";
+                        if (h>12){
+                            h=h-12;
+                            ampm2="PM";
+                        }
+                        h=h<10?"0"+h:h;
+                        m=m<10?"0"+m:m;
+                        s=s<10?"0"+s:s;
+            
+                        hr.innerText=h;
+                        min.innerText=m;
+                        ses.innerText=s;
+                        ampm1.innerText=ampm2;
+                        setTimeout(updateClock,1000);
+                    }
+                    updateClock();
+                </script>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
